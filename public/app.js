@@ -16,6 +16,7 @@ function add_to_cart(id)
   x = x * 1 + 1;
   window.localStorage.setItem(key, x);
   update_orders_input();
+  update_orders_button();
 }
 
 function cart_get_number_of_items()
@@ -69,7 +70,13 @@ function cart_get_orders()
 
 }
 
-$(function()
+
+
+function update_orders_button()
 {
-  update_orders_input();
-});
+  // variable text is string, that writed on button
+  //create string like 'Cart (number_of_ordered_pizza)'
+  var text = 'Cart('+ cart_get_number_of_items() + ')';
+  // access to cart button by selector in layout.erb <button id = 'orders_button'
+  $('#orders_button').val(text);
+}
