@@ -15,7 +15,7 @@ function add_to_cart(id)
   var x = window.localStorage.getItem(key);
   x = x * 1 + 1;
   window.localStorage.setItem(key, x);
-
+  update_orders_input();
 }
 
 function cart_get_number_of_items()
@@ -34,6 +34,18 @@ function cart_get_number_of_items()
       return cnt;
 
 }
+
+function update_orders_input()
+{
+  // initialize "order" by string like this
+  //"'product_1' = 'count', 'product_2' = 'count', 'product_3 ' = 'count' "
+  var orders = cart_get_orders();
+  //Access to button control through selector, using into the control  id = 'orders_input'
+  //and output to the control the string like this
+  //"'product_1' = 'count', 'product_2' = 'count', 'product_3 ' = 'count' "
+  $('#orders_input').val(orders);
+}
+
 
 function cart_get_orders()
 {
