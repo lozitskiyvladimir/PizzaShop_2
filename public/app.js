@@ -20,18 +20,19 @@ function add_to_cart(id)
 
 function cart_get_number_of_items()
 {
+  var cnt = 0;
   for (var i = 0; i < localStorage.length; i++)
   {
       var key = window.localStorage.key(i);
       var value = window.localStorage.getItem(key);
       if(key.indexOf('product_') == 0)
       {
-        snt = snt + value * 1;
+        cnt = cnt + value * 1;
       }
     }
       //return from method the string variable  "orders"
-      return snt;
+      return cnt;
 
-   
+
 
 }
