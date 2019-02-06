@@ -68,3 +68,8 @@ function cart_get_orders()
   return orders;
 
 }
+
+$(function()
+{
+  update_orders_input();
+});
