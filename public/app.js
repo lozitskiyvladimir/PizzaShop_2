@@ -10,17 +10,12 @@ function something()
 
 function add_to_cart(id)
 {
-<<<<<<< HEAD
 
-=======
->>>>>>> tag_2
   var key = 'product_' + id;
   var x = window.localStorage.getItem(key);
   x = x * 1 + 1;
   window.localStorage.setItem(key, x);
-<<<<<<< HEAD
 
-=======
 }
 
 function cart_get_number_of_items()
@@ -37,6 +32,6 @@ function cart_get_number_of_items()
       //return from method the string variable  "orders"
       return snt;
 
-   }
->>>>>>> tag_2
+   
+
 }
